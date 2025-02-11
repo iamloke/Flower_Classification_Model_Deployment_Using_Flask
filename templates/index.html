@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Flower Classification</title>
+</head>
+<body>
+    <h1>Flower Classification</h1>
+
+    <form action="{{ url_for('predict') }}" method="post">
+        <input type="text", name="SepalLengthCm", placeholder="Sepal Length", required>
+        <input type="text", name="SepalWidthCm", placeholder="Sepal Width", required>
+        <input type="text", name="PetalLengthCm", placeholder="Petal Length", required>
+        <input type="text", name="PetalWidthCm", placeholder="Petal Width", required>
+
+        <button type="submit">Predict</button>
+    </form>
+    <br>
+    {{ prediction_text }}
+</body>
+</html>
